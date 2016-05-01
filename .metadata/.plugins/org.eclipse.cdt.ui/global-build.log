@@ -1,0 +1,24 @@
+12:54:02 **** Incremental Build of configuration Debug for project stm32f429i-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+12:54:04 **** Incremental Build of configuration Debug for project JansonLab ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+E:\Lab5\JansonLab\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F429ZITx -DSTM32F429I_DISCO -DSTM32F4 -DSTM32 -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F429_439xx -DHAVE_STD_INT.H -I"E:/Lab5/stm32f429i-disco_stdperiph_lib" -I"E:/Lab5/JansonLab/inc" -I"E:/Lab5/stm32f429i-disco_stdperiph_lib/CMSIS/core" -I"E:/Lab5/stm32f429i-disco_stdperiph_lib/CMSIS/device" -I"E:/Lab5/stm32f429i-disco_stdperiph_lib/StdPeriph_Driver/inc" -I"E:/Lab5/stm32f429i-disco_stdperiph_lib/Utilities/Common" -I"E:/Lab5/stm32f429i-disco_stdperiph_lib/Utilities/STM32F429I-Discovery" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+<command-line>:0:13: warning: ISO C99 requires whitespace after the macro name
+'Finished building: ../src/main.c'
+' '
+'Building target: JansonLab.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"E:\Lab5\stm32f429i-disco_stdperiph_lib\Debug" -T"E:\Lab5\JansonLab\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "JansonLab.elf" @"objects.list"  -lstm32f429i-disco_stdperiph_lib
+'Finished building target: JansonLab.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "JansonLab.elf" "JansonLab.bin"
+arm-none-eabi-size "JansonLab.elf"
+   text	   data	    bss	    dec	    hex	filename
+  64856	   2300	   5800	  72956	  11cfc	JansonLab.elf
+' '
